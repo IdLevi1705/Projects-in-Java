@@ -11,7 +11,7 @@ public class SongLib extends Application{
 	
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Hello 2");
         primaryStage.show();
     }
 	
