@@ -1,3 +1,9 @@
+/* 
+ * Student Names
+ * Shlomo Benyaminov
+ * Idan Levi
+ */
+
 package songlib;
 
 import java.util.ArrayList;
