@@ -107,41 +107,6 @@ public class GuiController {
 	private void selectFirstItem() {
 		listView.getSelectionModel().select(0);
 	}
-/*	
-	private void showItem(Stage mainStage) {                
-	      Alert alert = 
-	         new Alert(AlertType.INFORMATION);
-	      //alert.initModality(Modality.NONE);
-	      alert.initOwner(mainStage);
-	      alert.setTitle("List Item");
-	      alert.setHeaderText(
-	           "Selected list item properties");
-
-	      String content = "Index: " + 
-	          listView.getSelectionModel()
-	                   .getSelectedIndex() + 
-	          "\nValue: " + 
-	          listView.getSelectionModel()
-	                   .getSelectedItem();
-
-	          alert.setContentText(content);
-	          alert.showAndWait();
-	          
-	   }
-*/	   
-	
-	private void showItemInputDialog(Stage mainStage) {                
-	      String item = listView.getSelectionModel().getSelectedItem();
-	      int index = listView.getSelectionModel().getSelectedIndex();
-	      
-	      TextInputDialog dialog = new TextInputDialog(item);
-	      dialog.initOwner(mainStage); dialog.setTitle("List Item");
-	      dialog.setHeaderText("Selected Item (Index: " + index + ")");
-	      dialog.setContentText("Enter name: ");
-
-	      Optional<String> result = dialog.showAndWait();
-	      if (result.isPresent()) { obsList.set(index, result.get()); }
-	 }
 	
 	private int getIndexOfSong(String strSong) {
 		int i = 0;
