@@ -28,7 +28,7 @@ public class SongLib extends Application {
 		GuiController guiController = loader.getController();
 		guiController.start(primaryStage);
 
-		Scene scene = new Scene(root, 700, 400);
+		Scene scene = new Scene(root, 770, 370);
 		primaryStage.setScene(scene);
 		primaryStage.show(); 
 	}
