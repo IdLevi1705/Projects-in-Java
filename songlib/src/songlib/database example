@@ -1,0 +1,19 @@
+to get 5th song in from data:
+data.get(4)
+
+to get the song name:
+data.get(4).get(0)
+
+to get the artist:
+data.get(4).get(1)
+
+to get the album
+data.get(4).get(2)
+
+to get the year
+data.get(4).get(3)
+
+
+Example format for text file would be:
+"beat it"	"michael jackson"	"thriller"	1982
+"cry me a river"	"justin timberlake"		
