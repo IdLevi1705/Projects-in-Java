@@ -12,9 +12,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="394.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="songlib.GuiController">
+<AnchorPane prefHeight="394.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="songlib.GuiController" styleClass="main"  stylesheets="@appDesign.css">
 	
-	<ListView fx:id="listView" layoutX="285.0" layoutY="22.0" prefHeight="330.0" prefWidth="215.0" />
+	<ListView fx:id="listView" layoutX="285.0" layoutY="22.0" prefHeight="330.0" prefWidth="215.0" styleClass="list"/>
    <TextField fx:id="txtSName" layoutX="95.0" layoutY="30.0" promptText="Beat It" />
    <TextField fx:id="txtAName" layoutX="95.0" layoutY="80.0" promptText="Michael Jackson" />
    <TextField fx:id="txtAlbum" layoutX="95.0" layoutY="130.0" promptText="Thriller" />
@@ -39,6 +39,7 @@
    <Label layoutX="545.0" layoutY="202.0" text="Year" />
    <Button fx:id="btnEdit" layoutX="556.0" layoutY="268.0" mnemonicParsing="false" onAction="#editSong" text="Edit Song" />
    <Button fx:id="btnDelete" layoutX="654.0" layoutY="268.0" mnemonicParsing="false" onAction="#deleteSong" text="Delete Song" />
+   <Button fx:id="btnExit" layoutX="670.0" layoutY="330.0" mnemonicParsing="false" onAction="#exitApp" text="Exit" styleClass="exit"/>
    <Label layoutX="585.0" layoutY="54.0" text="*" textFill="RED" />
    <Label layoutX="585.0" layoutY="104.0" text="*" textFill="RED" />
 </AnchorPane>

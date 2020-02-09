@@ -1,0 +1,9 @@
+
+.exit {
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+	-fx-pref-height: 28px;
+	-fx-pref-width: 50px;
+}

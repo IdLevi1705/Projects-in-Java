@@ -6,11 +6,22 @@
 
 package songlib;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Collections;
 import java.util.Optional;
+import java.util.Scanner;
+import java.util.stream.IntStream;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -25,6 +36,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class GuiController {
 
@@ -41,32 +53,23 @@ public class GuiController {
 	@FXML Button btnAdd;
 	@FXML Button btnEdit;
 	@FXML Button btnDelete;
+	@FXML Button btnExit;
 	
 	
 	
 	private ObservableList<String> obsList;
 	private ArrayList<ArrayList<String>> data;
+	private Object object;
 	
-	public void start(Stage mainStage) {  
+	public void start(Stage mainStage) throws IOException {  
+		
+
+				
 		//init database
 		data = new ArrayList<ArrayList<String>>();
-		
+		data = songsLoader(data);
 		//setup observable list
-		obsList = FXCollections.observableArrayList(/*                               
-				"Giants",                               
-				"Patriots",
-				"49ers",
-				"Rams",
-				"Packers",
-				"Colts",
-				"Cowboys",
-				"Broncos",
-				"Vikings",
-				"Dolphins",
-				"Titans",
-				"Seahawks",
-				"Steelers",
-				"Jaguars"*/); 
+		obsList = FXCollections.observableArrayList(data.get(0));
 
 		listView.setItems(obsList); 
 		
@@ -319,6 +322,44 @@ public class GuiController {
 	}
 
 
+	@FXML
+	private void exitApp(ActionEvent e) throws IOException {
+
+		File file = new File("/Users/idanlevi/git/CS213/songlib/src/songlib/databas.txt");
+		FileWriter writer = new FileWriter(file);
+		String tempData = "";
+
+		for (int i = 0; i < data.size(); i++) {
+			for (int j = 0; j < 4; j++) {
+				tempData = data.get(i).get(j);
+				writer.write('"'+ tempData + '"' + "\t");
+			}
+			writer.write(System.getProperty("line.separator"));
+		}
+		writer.close();	
+		
+		Platform.exit();
+		System.exit(0);
+	}
+	
+	
+	private ArrayList<ArrayList<String>> songsLoader(ArrayList<ArrayList<String>> data0) throws IOException {
+		
+		ArrayList<ArrayList<String>> initData = new ArrayList<ArrayList<String>>();
+		
+		File file = new File("/Users/idanlevi/git/CS213/songlib/src/songlib/databas.txt");
+		Scanner scan = new Scanner(file);
+		while (scan.hasNext()) {
+			String line = scan.nextLine();
+			String[] words = line.split("\t");			
+			initData.add(new ArrayList<String>(
+				Arrays.asList(words[0].replace("\"", ""), words[1].replace("\"", ""), words[2].replace("\"", ""), words[3].replace("\"", "")  )));
+		}
+		
+		return initData;
+	}
+	
+	
 }
 
 
