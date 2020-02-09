@@ -33,10 +33,7 @@ public class SongLib extends Application {
 		Scene scene = new Scene(root, 770, 370);
 		primaryStage.setScene(scene);
 		primaryStage.show(); 
-		
-		
 	}
-
 
 	public static void main(String[] args) {
 		launch(args);
