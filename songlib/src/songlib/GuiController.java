@@ -55,26 +55,29 @@ public class GuiController {
 	@FXML Button btnDelete;
 	@FXML Button btnExit;
 	
-	
-	
 	private ObservableList<String> obsList;
 	private ArrayList<ArrayList<String>> data;
 	private Object object;
 	
 	public void start(Stage mainStage) throws IOException {  
 		
-
-				
 		//init database
 		data = new ArrayList<ArrayList<String>>();
-		data = songsLoader(data);
-		//setup observable list
-		obsList = FXCollections.observableArrayList(data.get(0));
+		data = songsLoader();
+		obsList = FXCollections.observableArrayList();
+		
+		//add songs to obslist with proper format
+		for (int i = 0; i < data.size(); i++) {
+			String song_name = data.get(i).get(0);
+			String artist = data.get(i).get(1);
+			obsList.add(format(song_name, artist));
+		}
+		
+		//sort the obslist
+		Collections.sort(obsList);
+		
 
 		listView.setItems(obsList); 
-		
-		// select the first item
-	    selectFirstItem();
 
 	      // set listener for the items
 	      listView
@@ -83,6 +86,9 @@ public class GuiController {
 	        .addListener(
 	           (obs, oldVal, newVal) -> 
 	               showItem(mainStage));
+	      
+		// select the first item
+	    selectFirstItem();
 	      
 	     
 	  	// force the field to be numeric only
@@ -325,7 +331,7 @@ public class GuiController {
 	@FXML
 	private void exitApp(ActionEvent e) throws IOException {
 
-		File file = new File("/Users/idanlevi/git/CS213/songlib/src/songlib/databas.txt");
+		File file = new File("/Users/shlomi/Desktop/CS213/songlib/src/songlib/databas.txt");
 		FileWriter writer = new FileWriter(file);
 		String tempData = "";
 
@@ -343,11 +349,11 @@ public class GuiController {
 	}
 	
 	
-	private ArrayList<ArrayList<String>> songsLoader(ArrayList<ArrayList<String>> data0) throws IOException {
+	private ArrayList<ArrayList<String>> songsLoader() throws IOException {
 		
 		ArrayList<ArrayList<String>> initData = new ArrayList<ArrayList<String>>();
 		
-		File file = new File("/Users/idanlevi/git/CS213/songlib/src/songlib/databas.txt");
+		File file = new File("/Users/shlomi/Desktop/CS213/songlib/src/songlib/databas.txt");
 		Scanner scan = new Scanner(file);
 		while (scan.hasNext()) {
 			String line = scan.nextLine();
