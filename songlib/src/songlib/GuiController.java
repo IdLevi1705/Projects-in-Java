@@ -279,7 +279,7 @@ public class GuiController {
 	void deleteSong(ActionEvent e) {
 		//defense, make sure a song is selected
 		if (listView.getSelectionModel().getSelectedItem() == null) {
-			dialog(AlertType.INFORMATION, "No Song Selected", "You must have a selected song to edit");
+			dialog(AlertType.INFORMATION, "No Song Selected", "You must have a selected song to delete");
 			return;
 		}
 		
