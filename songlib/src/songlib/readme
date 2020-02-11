@@ -1,0 +1,7 @@
+To run the following project, you must add a JavaFX library.
+We used JavaFX12 and Java JDK 11
+
+After adding JavaFX library, you must also go to run as -> run configurations -> arguments
+and use this run-time argument:
+--module-path="/Users/shlomi/Downloads/javafx-sdk-13.0.2/lib" --add-modules=javafx.controls,javafx.fxml
+NOTE: You must change your path to where the java-fx-sdk is located on your computer
