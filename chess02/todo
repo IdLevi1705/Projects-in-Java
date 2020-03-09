@@ -1,0 +1,9 @@
+Pawn
+-add promotion
+-en passant
+
+King/Bishop
+-Castling
+
+Movement
+-Don't allow Player to move a piece if their king will be in check
