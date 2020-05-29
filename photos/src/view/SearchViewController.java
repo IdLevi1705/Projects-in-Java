@@ -17,7 +17,6 @@ import structures.Tag;
 
 /**
  * 
- * @author shlomi
  * class that represents the Search View Page
  * extends Controller class
  */
