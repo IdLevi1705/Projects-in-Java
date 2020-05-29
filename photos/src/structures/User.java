@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author shlomi
  * class that represents a User
  */
 public class User implements Serializable {
