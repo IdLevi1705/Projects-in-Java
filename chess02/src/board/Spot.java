@@ -4,7 +4,6 @@ import pieces.Piece;
 
 /**
  * A class that represents an individual spot in an 8x8 chess grid
- * @author shlomi
  */
 public class Spot {
 	/**
