@@ -18,7 +18,6 @@ import structures.*;
 
 /**
  * 
- * @author shlomi
  * abstract class that represents a GUI window
  */
 public abstract class Controller {
