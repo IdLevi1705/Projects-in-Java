@@ -10,7 +10,6 @@ import javafx.scene.image.ImageView;
 
 /**
  *
- * @author shlomi
  * class that represents a Photo object
  */
 public class Photo implements Serializable {
