@@ -9,7 +9,6 @@ import pieces.Rook;
 
 /**
  * A Class that represents a Chess Board using a 2D matrix of Spots
- * @author shlomi
  */
 public class Board {
 	/**
