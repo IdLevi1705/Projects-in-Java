@@ -27,7 +27,6 @@ import structures.Tag;
 
 /**
  * 
- * @author shlomi
  * class that controls the Album View GUI.
  * Extends the Controller class for common functionality between all pages in the application
  */
