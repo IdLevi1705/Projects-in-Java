@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import structures.User;
 
 /**
- * 
- * @author shlomi
+ *
  * class to serialize and read/write the users arraylist
  */
 public class Serialize implements Serializable {
