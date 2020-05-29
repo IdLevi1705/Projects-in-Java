@@ -5,7 +5,6 @@ import java.util.*;
 
 /**
  * 
- * @author shlomi
  * class that represents an Album which can contain photos
  */
 public class Album implements Serializable {
