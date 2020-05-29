@@ -6,7 +6,6 @@ import board.Spot;
 
 /**
  * 
- * @author shlomi
  * Class that represents a Pawn chess piece
  */
 public class Pawn extends Piece {
