@@ -12,7 +12,6 @@ import structures.User;
 
 /**
  * 
- * @author shlomi
  * class that represents the Login screen window
  *  extends controller class
  */
