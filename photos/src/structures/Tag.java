@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 /**
  * 
- * @author shlomi
  * class that represents a Tag in a Photo
  */
 public class Tag implements Serializable {
