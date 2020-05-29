@@ -19,7 +19,6 @@ import model.Serialize;
 
 /**
  * class to run the main photos application
- * @author shlomi
  */
 public class Photos extends Application {
 	
