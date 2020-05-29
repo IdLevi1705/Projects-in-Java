@@ -6,7 +6,6 @@ import board.Spot;
 
 /**
  * 
- * @author shlomi
  * Abstract class that represents a Piece on the chess board
  *
  */
