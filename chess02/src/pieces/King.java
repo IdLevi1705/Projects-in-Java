@@ -8,7 +8,6 @@ import chess.Player;
 
 /**
  * 
- * @author shlomi
  * Class that represents a King chess piece
  */
 public class King extends Piece {
