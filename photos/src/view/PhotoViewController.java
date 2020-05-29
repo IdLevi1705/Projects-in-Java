@@ -33,7 +33,6 @@ import structures.Photo;
 
 /**
  * 
- * @author shlomi
  * class that represents the Photo View page window
  *  extends controller class
  */
