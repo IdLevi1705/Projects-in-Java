@@ -21,7 +21,6 @@ import structures.Tag;
 
 /**
  * 
- * @author shlomi
  * class that represents the photo detail view window
  * extends controller class
  */
