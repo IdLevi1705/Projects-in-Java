@@ -14,7 +14,6 @@ import structures.User;
 
 /**
  * 
- * @author shlomi
  * class that controls the Admin View page of the GUI
  * Extends the Controller class for common functionality between all pages in the application
  */
